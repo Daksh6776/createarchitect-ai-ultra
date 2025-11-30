@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CreateArchitect AI Ultra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div>
+        <h1>CreateArchitect AI Ultra</h1>
+        <p>Cloud AI assistant for Create mod builds, modding, and general help.</p>
+      </div>
+      <div class="mode-box">
+        <label for="mode">Mode:</label>
+        <select id="mode">
+          <option value="auto">Auto (AI chooses)</option>
+          <option value="create">Create Architect</option>
+          <option value="pro">Pro Modder</option>
+          <option value="general">General</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <section class="pane">
+        <h2>Projects & Style</h2>
+
+        <div class="sub">
+          <h3>Projects</h3>
+          <div class="row">
+            <input id="project-name" placeholder="Project name..." />
+            <button id="create-project">Use / Create</button>
+          </div>
+          <div id="project-list"></div>
+        </div>
+
+        <div class="sub">
+          <h3>Reply Style</h3>
+          <div class="style-grid">
+            <label> Tone
+              <select id="style-tone">
+                <option value="friendly">Friendly</option>
+                <option value="formal">Formal</option>
+                <option value="technical">Technical</option>
+                <option value="casual">Casual</option>
+                <option value="serious">Serious</option>
+              </select>
+            </label>
+
+            <label> Detail
+              <select id="style-detail">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </label>
+
+            <label> Emojis
+              <select id="style-emojis">
+                <option value="none">None</option>
+                <option value="some" selected>Some</option>
+                <option value="max">Max</option>
+              </select>
+            </label>
+
+            <label> Formatting
+              <select id="style-formatting">
+                <option value="markdown" selected>Markdown</option>
+                <option value="plain">Plain</option>
+                <option value="bullet">Bullet</option>
+                <option value="tutorial">Tutorial</option>
+              </select>
+            </label>
+          </div>
+          <button id="save-style">Save Style</button>
+          <small id="style-status"></small>
+        </div>
+      </section>
+
+      <section class="pane">
+        <h2>Chat</h2>
+        <div id="chat-log"></div>
+        <div class="row">
+          <textarea id="chat-input" placeholder="Ask about a Create factory, modding bug, or anything..."></textarea>
+          <button id="send-chat">Send</button>
+        </div>
+      </section>
+
+      <section class="pane">
+        <h2>Schematic Generator</h2>
+        <textarea id="schem-input" placeholder="Describe the Create contraption or build you want..."></textarea>
+        <button id="gen-schem">Generate Schematic JSON</button>
+        <pre id="schem-output"></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>Backend: Node + Express · AI: OpenAI GPT-4.x · Storage: local JSON files.</p>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  background: #020617;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.mode-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.pane {
+  flex: 1 1 320px;
+  background: #020617;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 0.75rem;
+  min-height: 260px;
+}
+
+.pane h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.sub {
+  margin-bottom: 0.8rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.5rem;
+}
+
+textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+button {
+  border-radius: 9999px;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  background: #22c55e;
+  color: #021315;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#chat-log {
+  background: #020617;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  padding: 0.5rem;
+  height: 260px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.msg {
+  margin-bottom: 0.35rem;
+}
+
+.msg.user strong {
+  color: #38bdf8;
+}
+
+.msg.ai strong {
+  color: #a855f7;
+}
+
+#schem-output {
+  background: #020617;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  padding: 0.5rem;
+  height: 220px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+}
+
+.project-item {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  display: inline-block;
+  margin-right: 0.25rem;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.project-item.active {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+}
+
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin: 0.3rem 0 0.5rem;
+}
+
+footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 0.4rem 1.2rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
